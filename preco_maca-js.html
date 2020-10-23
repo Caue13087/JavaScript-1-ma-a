@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Preço Maca</title>
+</head>
+
+<body>
+
+    <form id="formprecomaca">
+        <input type="text" required name="quantidademaca" id="quantidademaca">
+        <button type="submit" id="btnCalcular">Calcular</button>
+    </form>
+
+    <script>
+        
+
+        let qtdeMaca = document.querySelector('#quantidademaca');
+        qtdeMaca.value = 93;
+        
+        let btnCalcular = document.querySelector('#btnCalcular');
+
+        btnCalcular.addEventListener('click', function(event){
+            event.preventDefault();
+            if(parseInt(qtdeMaca.value) > 54){
+                console.log(parseInt(qtdeMaca.value) * parseFloat('0.3'));
+            } else {
+                console.log(parseInt(qtdeMaca.value) * parseFloat('0.4'));
+            }
+        })
+    </script>
+
+</body>
+
+</html>
